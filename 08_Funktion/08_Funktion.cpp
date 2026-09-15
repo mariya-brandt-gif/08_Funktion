@@ -359,12 +359,137 @@ using namespace std;
 //		cout << "false" << endl;
 //}
 
+//
+//bool isLeapYear(int year) 
+//{
+//	if (year % 400 == 0)
+//		return true;
+//	if (year % 100 == 0)
+//		return false;
+//	if (year % 4 == 0)
+//		return true;
+//	return false;
+//}
+//int daysInMonth(int month, int year)
+//{
+//	if (month == 2)
+//	{
+//		if (isLeapYear(year))
+//			return 29;
+//		else
+//			return 28;	
+//	}
+//	if (month == 4 || month == 6 || month == 9 || month == 11)
+//		return 30;
+//	return 31;
+//}
+//long long daysFromStart(int day, int month, int year) 
+//{
+//	long long days = 0;
+//	for (int y = 1; y < year; y++)
+//	{
+//		if (isLeapYear(y))
+//			days += 366;
+//		else 
+//			days +=365;
+//	}
+//	for (int m = 1; m < month; m++)
+//	{
+//		days += daysInMonth(m, year);
+//	}
+//	days += day;
+//	return days;
+//}
+//long long dateDifference(int day1, int month1, int year1, int day2, int month2, int year2)
+//{
+//	long long date1 = daysFromStart(day1, month1, year1);
+//	long long date2 = daysFromStart(day2, month2, year2);
+//	long long difference = date1 - date2;
+//
+//	if (difference < 0)
+//		difference = -difference;
+//	return difference;
+//}
+//int main()
+//{
+//	int day1, month1, year1;
+//	int day2, month2, year2;
+//
+//	cout << "Enter first date (day month year): "<< endl;
+//	cin >> day1 >> month1 >> year1;
+//
+//	cout << "Enter second date (day month year): "<< endl;
+//	cin >> day2 >> month2 >> year2;
+//
+//	cout << "Difference in days: " << dateDifference(day1, month1, year1, day2, month2, year2) << endl;
+//}
 
 
 
 
 
 
+//double average(int a[], int n) {
+//	int sum = 0;
+//	for (int i = 0; i < n; i++)
+//	{
+//		sum += a[i];
+//	}
+//	return (double)sum / n;
+//
+//}
+//int main() {
+//	int a[10];
+//
+//	srand(time(0));
+//
+//	for (int i = 0; i < 10; i++) { a[i] = rand() % 100; };
+//	cout << "Array: ";
+//
+//	for (int i = 0; i < 10; i++)
+//	{
+//		cout << a[i] << " ";
+//	}
+//	cout << endl;
+//	cout << "Average: " << average(a, 10) << endl;
+//}
+
+
+
+void countElements(int a[], int n)
+{
+	int positive = 0;
+	int negative = 0;
+	int zero = 0;
+
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] > 0)
+			positive++;
+		if (a[i] < 0)
+			negative++;
+		else
+			zero++;
+	}
+	cout << "Positive: " << positive << endl;
+	cout << "Negative: " << negative << endl;
+	cout << "Zero: " << zero << endl;
+}
+int main() {
+	int a[10];
+
+	srand(time(0));
+
+	for (int i = 0; i < 10; i++) { a[i] = rand() % 201-100; };
+	cout << "Array: ";
+
+	for (int i = 0; i < 10; i++)
+	{
+		cout << a[i] << " ";
+	}
+	cout << endl;
+	countElements(a, 10);
+}
 
 
 
